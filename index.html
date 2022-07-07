@@ -30,9 +30,9 @@
         </a>
         
           <ul class="navigation-list">
-            <li class="navigation-list-item"><a class="navigation-list-link actual-page" href="">Agencja</a></li>
+            <li class="navigation-list-item"><a class="navigation-list-link actual-page" href="./index.html">Agencja</a></li>
             <li class="navigation-list-item"><a class="navigation-list-link" href="./portfolio.html">Portfolio</a></li>
-            <li class="navigation-list-item"><a class="navigation-list-link" href="">Kontakt</a></li>
+            <li class="navigation-list-item"><a class="navigation-list-link" href="./index.html">Kontakt</a></li>
           </ul>
         <div class="contact-color">
         <ul class="header-contact">
@@ -106,33 +106,40 @@
           <h2 class="second-header">Czym się zajmujemy?</h2>
           <div>
             <ul class="second-header-item">
-              <li >
-                <div class="second-header-item-heading"><h3 class="speciality">aplikacje komputerowe</h3></div>               
+              <li class="second-header-image-position">
+                               
                 <img 
                   src="images/typing.jpg"
                   width="370px"
                   height="294px"
                   alt="typing on keyboard "> 
+                  <div class="second-header-item-heading">
+                    <h3>Aplikacje Komputerowe</h3>
+                  </div>
               </li>
               
-              <li>
-                <div class="second-header-item-heading"><h3 class="speciality">aplikacje mobilne</h3></div>
-                <img
+              <li class="second-header-image-position">
+                
+                <img 
                   src="images/phone.jpg"
                   width="370px"
                   height="294px"
                   alt="a girl is holding a phone"
-                />
+                /><div class="second-header-item-heading">
+                  <h3>APLIKACJE MOBILNE</h3>
+                </div>
               </li>
 
-              <li >
-                <div class="second-header-item-heading"><h3 class="speciality">rozwiązania graficzne</h3></div>
+              <li class="second-header-image-position">
+                
                 <img
                   src="images/tablet.jpg"
                   width="370px"
                   height="294px"
                   alt="someone selects a color on the tablet "
-                />
+                /><div class="second-header-item-heading">
+                  <h3>ROZWIĄZANIA GRAFICZNE</h3>
+                </div>
               </li>
             </ul>
           </div>
@@ -253,52 +260,41 @@
     </main>
     
     <footer >
-      <div class="container social-flex">
-       <div class="left-side-footer">
-        <a  href="./index.html"
-          ><span class="web logotype">Web</span><span class="studio-footer logotype">Studio</span>
-        </a>
-        <address class="footer-address">
-      <ul >
-        <li>
-            m.Warszawa, Aleje Jerozolimskie 21
-        </li>
-        <li>
-          <a class="footer-mail" href="mailto:info@example.com"
-            >info@example.com</a>
-        </li>
-        <li>
-          <a class="footer-tel" href="tel:+48111111111">+48 111 111 111</a>
-        </li>
-      </ul>
-    </address>
-       </div>
-        
-    <div class="join-us ">
-      <h3 class="join-us-header">DOŁĄCZ DO NAS</h3>
-      <ul class="social-list-footer">
-        <li><a class="social-list-item-footer" href=""><svg class="social-list-item-icon-footer"><use href="./images/icons/socials.svg#icon-instagram" width="20" height="20"></use></svg></a></li>
-        <li><a class="social-list-item-footer" href=""><svg class="social-list-item-icon-footer"><use href="./images/icons/socials.svg#icon-twitter" width="20" height="20"></use></svg></a></li>
-        <li><a class="social-list-item-footer" href=""><svg class="social-list-item-icon-footer"><use href="./images/icons/socials.svg#icon-facebook" width="20" height="20"></use></svg></a></li>
-        <li><a class="social-list-item-footer" href=""><svg class="social-list-item-icon-footer"><use href="./images/icons/socials.svg#icon-linkedin2" width="20" height="20"></use></svg></a></li>
-        
-      </ul>
-    </div>
-    <div class="container-footer-form">
-      <h3 >Zapisz się do newslettera</h3>
-      <div class="footer-form">
-        <form name="newsletter" action="http://localhost:3000/posts"
-        method="POST">
-      <label><input type="email" name="email" placeholder="E-mail"></label>
-    <button type="submit">
-      <span class="sign-up">Zapisz się</span>
-      <svg><use href="./images/icons/socials.svg#form-send"></use></svg>
-    </button></form>
+     <div class="container">
+      <div class="footer-container">
+        <a class="navigation-logo" href="./index.html" width="145px"
+        height="31px"><span class="web logotype">Web</span><span class="studio-footer logotype">Studio</span>
+        </a><br>
+        <address>
+          <span class="street-address">m. Warszawa, Aleje Jerozolimskie 21</span><br>
+          <a href="mailto:info@devstudio.com" class="footer-contact-link">info@example.com</a><br>
+          <a href="tel:+48111111111" class="footer-contact-link">+48 111 111 111</a>
+        </address>
       </div>
-    </div>
+        <div class="footer-container-social">
+          <h3> DOŁĄCZ DO NAS</h3>
+          <ul class="social-list-footer">
+            <li><a class="social-list-item-footer" href=""><svg class="social-list-item-icon-footer"><use href="./images/icons/socials.svg#icon-instagram" width="20" height="20"></use></svg></a></li>
+            <li><a class="social-list-item-footer" href=""><svg class="social-list-item-icon-footer"><use href="./images/icons/socials.svg#icon-twitter" width="20" height="20"></use></svg></a></li>
+            <li><a class="social-list-item-footer" href=""><svg class="social-list-item-icon-footer"><use href="./images/icons/socials.svg#icon-facebook" width="20" height="20"></use></svg></a></li>
+            <li><a class="social-list-item-footer" href=""><svg class="social-list-item-icon-footer"><use href="./images/icons/socials.svg#icon-linkedin2" width="20" height="20"></use></svg></a></li>
+          </ul>
+        </div>
+          <div class="footer-container-form">
+            <h3>ZAPISZ SIĘ DO NEWSLETTERA</h3>
+            <div class="footer-form">
+              <form name="newsletter" action="http://localhost:3000/posts"
+              method="POST">
+            <label><input type="email" name="email" placeholder="E-mail"></label>
+          <button type="submit">
+            <span class="sign-up">Zapisz się</span>
+            <svg><use href="./images/icons/socials.svg#form-send"></use></svg>
+          </button></form>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  
+     </div>
     </footer>
 
 

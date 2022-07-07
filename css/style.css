@@ -18,7 +18,7 @@ img {
   padding: 94px 0;
 }
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", "sans-serif";
   color: var(--black);
 }
 .container {
@@ -29,24 +29,27 @@ body {
 .navigation-list-link {
   color: var(--black);
   transition: var(--transition);
+  transition-property: color;
+  position: relative;
 }
-.navigation-list-link::after {
-  content: " ";
-  display: block;
-  background-color: rgba(255, 255, 255, 0);
-  transition: var(--transition);
-}
+
 .actual-page::after,
 .navigation-list-link:hover::after {
+  transition: var(--transition);
+  transition-property: color, background, border;
   content: " ";
-  position: relative;
+  position: absolute;
   height: 4px;
+  left: 0;
+  right: 0;
   border-radius: 2px;
   background-color: var(--blue);
-  top: 30px;
+  top: 46px;
 }
 .actual-page {
   color: var(--blue);
+  transition: var(--transition);
+  transition-property: color, background, border;
 }
 .navigation-logo {
   padding-right: 93px;
@@ -115,6 +118,7 @@ header {
   color: #757575;
   fill: #757575;
   transition: var(--transition);
+  transition-property: fill, color;
 }
 a:hover,
 a:focus {
@@ -146,14 +150,19 @@ a:focus {
   letter-spacing: 0.03em;
   font-weight: 700;
   line-height: 1.4em;
+  transition: var(--transition);
+  transition-property: color;
 }
 .studio:hover {
   color: var(--blue);
+  transition: var(--transition);
+  transition-property: color;
 }
 
 a {
   text-decoration: none;
   transition: var(--transition);
+  transition-property: color;
 }
 
 ul {
@@ -249,12 +258,15 @@ h4 {
   line-height: 1.6em;
   padding: 6px 22px;
   transition: var(--transition);
+  transition-property: background, color, box-shadow;
 }
 .button-portfolio {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 94px;
+  transition: var(--transition);
+  transition-property: color;
 }
 .button-space:not(:last-child) {
   margin-right: 8px;
@@ -272,6 +284,8 @@ h4 {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  transition: var(--transition);
+  transition-property: background, color, box-shadow;
 }
 .feature-item {
   color: var(--grey);
@@ -308,30 +322,6 @@ h4 {
   justify-content: center;
 }
 
-.container .footer {
-  padding: 0;
-  margin: 0;
-}
-.footer-address {
-  font-style: normal;
-  color: var(--white);
-  line-height: 1.7em;
-  padding-bottom: 9px;
-}
-.footer-tel {
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.7em;
-  transition: var(--transition);
-}
-.footer-mail {
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.7em;
-  transition: var(--transition);
-}
 .team-background {
   background: #f5f4fa;
 }
@@ -376,6 +366,7 @@ h4 {
   opacity: 0;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 .team-items {
   justify-content: space-between;
@@ -462,8 +453,6 @@ h4 {
 footer {
   font-style: normal;
   color: #fff;
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--graphite);
 }
 .footer-address {
@@ -481,7 +470,6 @@ footer {
 .social-list-footer {
   display: flex;
   align-items: center;
-  margin-top: 20px;
   margin-left: -10px;
 }
 .social-list-item-footer {
@@ -499,6 +487,7 @@ footer {
 .social-list-item-footer:hover {
   background-color: var(--blue);
   transition: var(--transition);
+  transition-property: background;
 }
 .social-list-item-icon-footer {
   width: 20px;
@@ -510,6 +499,7 @@ footer {
 }
 .left-side-footer {
   margin-right: 70px;
+  margin-top: -13px;
 }
 
 .feature-picture {
@@ -552,6 +542,7 @@ footer {
   fill: #afb1b8;
   transition: color var(--transition);
   background-color: var(--transition);
+  transition-property: color, fill, background;
 }
 .social-list-item-our-team:hover {
   background-color: var(--blue);
@@ -561,6 +552,7 @@ footer {
   width: 44px;
   height: 44px;
   transition: var(--transition);
+  transition-property: color, fill, background;
 }
 
 .social-list-item-icon-our-team {
@@ -596,7 +588,7 @@ footer {
   color: #fff;
   text-align: center;
   max-width: 696px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 }
 .clients-list-item {
   display: flex;
@@ -610,6 +602,7 @@ footer {
   color: #afb1b8;
   fill: #afb1b8;
   transition: color var(--transition);
+  transition-property: color, border, fill;
 }
 .our-clients-list {
   list-style-type: none;
@@ -658,6 +651,7 @@ footer {
   color: var(--blue);
   fill: var(--blue);
   transition: var(--transition);
+  transition-property: color, border, fill;
 }
 
 .clients-list-margins {
@@ -707,6 +701,7 @@ footer {
   opacity: 90%;
   transform: translatey(100%);
   transition: transform 250ms ease;
+  transition-property: transform;
 }
 .portfolio-item-feature {
   color: var(--grey);
@@ -726,6 +721,7 @@ footer {
 }
 .portfolio-item:hover .overlay {
   transform: translatey(0);
+  transition-property: transform;
 }
 .portfolio p {
   padding: 4px 24px 20px 24px;
@@ -737,7 +733,7 @@ footer {
 }
 .is-hidden {
   opacity: 0;
-  visibility: none;
+  visibility: hidden;
   pointer-events: none;
 }
 .close-btn {
@@ -768,6 +764,8 @@ footer {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: var(--transition);
+  transition-property: color;
 }
 
 .backdrop {
@@ -777,6 +775,8 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  transition-property: opacity, visibility;
 }
 .container-footer-form {
   display: flex;
@@ -788,7 +788,7 @@ footer {
   color: rgba(255, 255, 255, 0.6);
   align-items: center;
   letter-spacing: 0.03em;
-  padding-left: 60px;
+  padding-bottom: 94px;
 }
 .footer-form button {
   width: 200px;
@@ -937,10 +937,19 @@ input:focus-visible {
 }
 .tick-sign-container a {
   color: var(--blue);
+  text-decoration: underline;
+}
+.tick-sign-container {
+  display: flex;
+  justify-content: center;
+  padding-right: 40px;
 }
 .web-tick-sign {
   position: absolute;
   opacity: 0;
+}
+.web-tick-sign:hover {
+  cursor: pointer;
 }
 .tick-sign-label {
   margin: 0;
@@ -957,6 +966,7 @@ input:focus-visible {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 2px;
 }
+
 .web-tick-sign:checked + .tick-sign-label::before {
   background-color: var(--blue);
   border: none;
@@ -964,6 +974,7 @@ input:focus-visible {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .footer-form button svg {
   fill: #fff;
   right: 32px;
@@ -995,4 +1006,61 @@ input:focus-visible {
   background-color: transparent;
   color: var(--grey);
   padding: 16px;
+}
+.footer-container {
+  padding-top: 60px;
+}
+footer address {
+  font-style: normal;
+  margin-top: 20px;
+}
+.footer-contact-link {
+  color: #fff;
+  opacity: 40%;
+}
+footer h3 {
+  font-weight: 700;
+  font-size: 14px;
+  padding-top: 72px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  padding-bottom: 20px;
+}
+.footer-container-social {
+  max-width: 300px;
+  padding-bottom: 100px;
+}
+
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+footer > .container {
+  display: flex;
+}
+.footer-container-social {
+  padding-left: 70px;
+  padding-right: 77px;
+}
+.second-header-item-heading {
+  display: flex;
+  background: rgba(47, 48, 58, 0.8);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 0;
+  justify-content: center;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  position: absolute;
+}
+.second-header-image-position {
+  position: relative;
 }
