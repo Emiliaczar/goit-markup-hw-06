@@ -1016,6 +1016,7 @@ footer address {
 .footer-contact-link {
   color: #fff;
   opacity: 40%;
+  margin-bottom: 8px;
 }
 footer h3 {
   font-weight: 700;
@@ -1065,4 +1066,7 @@ footer > .container {
 }
 .footer-container-form {
   margin-left: auto;
+}
+.street-address {
+  margin-bottom: 8px;
 }
